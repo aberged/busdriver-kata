@@ -30,7 +30,7 @@ public class BusDriversRunner<S, G> {
         return null;
     }
 
-    synchronized public void drive() {
+    public void drive() {
         for (int i=0;i<times;i++){
             driversAtStopsMap.clear();
             Iterator<BusDriver<S, G>> iterator = driversSet.iterator();
@@ -43,7 +43,7 @@ public class BusDriversRunner<S, G> {
         }
     }
 
-    synchronized public void drive(int n){
+    public void drive(int n){
         times = n;
         drive();
     }
